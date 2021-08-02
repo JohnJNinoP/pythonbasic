@@ -14,7 +14,5 @@ def run():
         print(f'la raiz cuadrada es {respuesta}')
 
 
-
-
 if __name__ == '__main__':
     run()
