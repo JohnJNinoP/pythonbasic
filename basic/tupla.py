@@ -6,5 +6,9 @@ def run():
     print(tupla.index)
     print(tupla)
 
+    x , y = (5,6)
+    print(x)
+    print(y)
+
 if __name__ == '__main__':
     run()
