@@ -23,5 +23,13 @@ def run():
         print(key)        
         print(value)
 
+    # si la llave se encuentra
+    validar = 'key1' in diccionario
+    print(validar)     
+    print('key?' in diccionario)
+
+    # Elimiar la llave
+    del diccionario['key1']
+
 if __name__ == '__main__':
     run()
