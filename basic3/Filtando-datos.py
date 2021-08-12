@@ -84,7 +84,8 @@ def run():
 
     # map
     print(list(map(lambda x : {"name" : x["name"] , "age" : x["age"] }  , DATA )))
-    #print(list(map(lambda x: x | {'old' : x["age"]>70},DATA)))
+    print(list(map(lambda x: x | {'old' : x["age"]>70},DATA)))
+
 
 if __name__ == '__main__':
     run()
