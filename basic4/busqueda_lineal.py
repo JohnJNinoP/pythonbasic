@@ -4,6 +4,7 @@ def run():
     tamano_lista = 0
     lista = []
     objetivo = 0
+
     while stop == False:
         try:
             tamano_lista = int(input("Tamaño de la lista"))
@@ -20,12 +21,13 @@ def run():
     
 def busqueda_lineal(lista,objetivo):
     match = False
-
+    conteo = 0
     for i in lista:
+        conteo += 1
         if i == objetivo:
             match = True
             break
-    
+    print(conteo)
     return match
 
 if __name__ == '__main__':

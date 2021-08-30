@@ -1,5 +1,7 @@
 
 import random
+
+
 def run():
     stop = False
     tamano_lista = 0
@@ -15,23 +17,24 @@ def run():
         except ValueError:
             print("No es un numero")
 
+    conteo = []
+    print(busqueda_binaria(lista,0,100, objetivo,conteo))
+    print(len(conteo))
     
-    print(busqueda_binaria(lista,0,100, objetivo))
+def busqueda_binaria(lista,inicio,final,objetivo,conteo):
 
-    
-def busqueda_binaria(lista,inicio,final,objetivo):
-
-    if inicio> final:
+    conteo.append(1)
+    if inicio > final:
         return False
     
-    medio = inicio + final // 2
+    medio = (inicio + final) // 2
 
     if lista[medio] == objetivo:
         return True
     elif lista[medio]< objetivo:
-        busqueda_binaria(lista,medio+1,final,objetivo)
+        return busqueda_binaria(lista,medio+1,final,objetivo,conteo)
     else :
-         busqueda_binaria(lista,inicio,medio-1,objetivo)
+        return busqueda_binaria(lista,inicio,medio-1,objetivo,conteo)
     
 
     
