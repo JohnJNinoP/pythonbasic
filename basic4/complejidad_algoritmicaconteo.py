@@ -3,6 +3,7 @@ def f(x):
 
     for i in range(1000):
         respuesta += 1
+        print(i)
     
     for i in range(x):
         respuesta += 1
@@ -11,6 +12,7 @@ def f(x):
         for j in range(x):
             respuesta += 1
             respuesta += 1
+            print(j)
     
     return respuesta
 
