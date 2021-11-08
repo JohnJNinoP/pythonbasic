@@ -31,7 +31,22 @@ class RegisterNewUer(unittest.TestCase):
         new_letter_subscription = driver.find_element_by_id('is_subscribed')
         submit_button = driver.find_element_by_xpath('//*[@id="form-validate"]/div[2]/button')
 
-        first_name.send_keys('Test')
+        self.assertTrue(first_name.is_enabled()
+        and middle_name.is_enabled()
+        and last_name.is_enabled()
+        and email.is_enabled()
+        and password.is_enabled()
+        and confirm_password.is_enabled()
+        and new_letter_subscription.is_enabled()
+        and submit_button.is_enabled())
+        
+        first_name.send_keys('Test1')
+        middle_name.send_keys('Middle1')
+        last_name.send_keys('Tes1t')
+        email.send_keys('Test1@mail2.com')
+        password.send_keys('Test1234516')
+        confirm_password.send_keys('Test1234516')
+        submit_button.click()
     
     def tearDown(self):
         self.driver.quit()
