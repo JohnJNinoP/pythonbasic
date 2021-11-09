@@ -37,3 +37,6 @@ is_selected()	Verifica si el elemento está seleccionado, para el caso de checkb
 send_keys(value)	Simula escribir o presionar teclas en un elemento	email_field.send_keys(‘team@platzi.com’)
 submit()	Envía un formulario o confirmación en un text area	search_field.submit()
 value_of_css_property(property_name)	Obtiene el valor de una propiedad CSS del elemento	header.value_of_css_property(‘background-color’)
+
+ddt => data driver testing 
+POM => Page object model
