@@ -1,4 +1,3 @@
-from types import DynamicClassAttribute
 import unittest
 from selenium import webdriver
 from pyunitreport import HTMLTestRunner
