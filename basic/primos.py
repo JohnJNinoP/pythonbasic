@@ -15,7 +15,7 @@ def  Es_Primo(numero):
     if contador == 0:
         return True
     else:
-        return False    
+        return False
     
 
 if __name__ == "__main__":
