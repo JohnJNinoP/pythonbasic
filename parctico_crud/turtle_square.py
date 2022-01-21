@@ -1,6 +1,5 @@
 import turtle
 
-
 window = turtle.Screen()
 window.title("test")
 
