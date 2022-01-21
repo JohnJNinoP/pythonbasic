@@ -1,14 +1,15 @@
 import sys
 
 
-clients = "pablo,ricardo"
+
+clients = ["pablo","ricardo"]
 
 def create_client(name_client):
     global clients 
 
     if(name_client not in clients):
-        _add_comma()
-        clients += name_client
+        # _add_comma()
+        clients.append(name_client)
     else:
         print("Cliente already is in the client\'s list")
 
@@ -18,39 +19,48 @@ def _add_comma():
 
 def list_clients():
     global clients
-    print(clients)
+    for idx , client in enumerate(clients):
+        print(f'{idx}-{client}')
+    #print(clients)
 
 def update_clients(name_client,update_client_name):
     global clients
-    _cliets_replace(name_client,update_client_name)
+    if (name_client in clients):
+        clients[clients.index(name_client)] = update_client_name
+    else:
+        print("Client not found in list")
         
 def delete_client_name(name_client):
     global clients
-    _cliets_replace(name_client,"")
+    if (name_client in clients):
+        clients.remove(name_client)
+    else:
+        print("Client not found in list")
 
 def _get_client_name():
     client_name = None
     while not client_name:
         client_name = input("what is the client name?")
 
-
     if client_name.lower() == 'exit':
         sys.exit()
     
     return client_name
 
-def _cliets_replace(name_client,update_client_name):
-    global clients
-    if (name_client in clients):
-        clients = clients.replace(name_client,update_client_name)
-    else:
-        print("Client not found in list")
+
+# def _cliets_replace(name_client,update_client_name):
+#     global clients
+#     if (name_client in clients):
+#         clients.pop(name_client)
+#         # clients = clients.replace(name_client,update_client_name)
+#     else:
+#         print("Client not found in list")
 
 def search_client(name_client) :
     global clients
-    list_clients = clients.split(",")
+    #list_clients = clients.split(",")
     
-    for client in list_clients:
+    for client in clients:
         if client == name_client:
             return True
     return False
